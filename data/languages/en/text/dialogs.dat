@@ -1,0 +1,50 @@
+dialog{
+  id = "Base_centrale.marion.items_et_monnaie",
+  text = [[
+Bienvenue, aventurier ! 
+Derrière moi se trouve une porte
+spéciale. En la franchissant, tu 
+apprendras les secrets du 
+codage des PNJ.
+Certains de ces personnages 
+généreux te donneront des rubis 
+et des objets précieux, 
+tandis que d'autres, plus sournois,
+te les retireront.
+]],
+}
+
+dialog{
+  id = "pnj_items_monnaie.doc.10_monnaie",
+  text = [[
+Nom de Zeus ! 
+Prends ces 10 pièces pour t'aider 
+dans ton aventure. 
+Utilise-les à bon escient !
+]],
+}
+
+dialog{
+  id = "pnj_items_monnaie.info.01",
+  text = [[
+Le script 
+game:add_money(nombre) 
+permet de donner autant d'argent 
+que vous le souhaitez, 
+cependant ce PNJ donne de 
+l'argent à chaque fois que vous lui 
+parlez. Allez voir la map 2 
+pour régler ce problème.
+]],
+}
+
+dialog{
+  id = "pnj_items_monnaie.marty.30_monnaie",
+  text = [[
+Prends ces 30 pièces pour t'aider 
+dans ton aventure. 
+Et souviens-toi, 
+je ne suis pas une poule mouillée.
+]],
+}
+
