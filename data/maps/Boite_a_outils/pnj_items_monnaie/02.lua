@@ -10,17 +10,91 @@
 local map = ...
 local game = map:get_game()
 
+
+
+
+
 function marty:on_interaction()
-    -- Vérifie si le joueur n'a pas encore reçu l'argent de Marty
-    if game:get_value("received_money_from_marty_1") then
-        return
+    if not game:get_value("carte_2_recu_30_rubis_marty") then
+        game:start_dialog("pnj_items_monnaie.marty.30_monnaie", function()
+            game:add_money(30)
+            game:set_value("carte_2_recu_30_rubis_marty", true)
+        end)
     end
-    
-    -- Démarre un dialogue avec l'identifiant "pnj_items_monnaie.marty.30_monnaie"
-    game:start_dialog("pnj_items_monnaie.marty.30_monnaie", function()
-        -- Ajoute 30 unités de monnaie au joueur
-        game:add_money(30)
-        -- Marque que l'argent a été donné
-        game:set_value("received_money_from_marty_1", true)
-    end)
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function map:on_started()
+  self.images = {
+    sol.surface.create("Info/pnj_items_monnaie/map02_1.png"),
+    sol.surface.create("Info/pnj_items_monnaie/map02_2.png"),
+    sol.surface.create("Info/pnj_items_monnaie/map02_3.png"),
+    sol.surface.create("Info/pnj_items_monnaie/map02_4.png"),
+    sol.surface.create("Info/pnj_items_monnaie/map02_5.png"),
+  }
+  self.current_image_index = nil  -- Indicateur d'image actuelle (nil signifie pas d'image affichée)
+end
+
+function info:on_interaction()
+  -- Réinitialiser l'index de l'image actuelle
+  map.current_image_index = 1
+  game:set_hud_enabled(false)  -- Désactiver le HUD
+
+  -- Fonction pour dessiner l'image actuelle
+  local function draw_current_image(dst_surface)
+    if map.current_image_index and map.images[map.current_image_index] then
+      map.images[map.current_image_index]:draw(dst_surface, 0, 0)
+    end
+  end
+
+  -- Ajouter la fonction de dessin à la map
+  function map:on_draw(dst_surface)
+    draw_current_image(dst_surface)
+  end
+end
+
+function map:on_command_pressed(command)
+  if command == "action" then  -- "attack" est généralement mappé à la touche Espace
+    if map.current_image_index then
+      if map.current_image_index < #map.images then
+        map.current_image_index = map.current_image_index + 1  -- Passer à l'image suivante
+      else
+        map.current_image_index = nil  -- Arrêter d'afficher les images
+        map.on_draw = nil
+        game:set_hud_enabled(true)  -- Réactiver le HUD
+      end
+      return true
+    end
+  end
+  return false
 end

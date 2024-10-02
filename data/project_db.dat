@@ -1,7 +1,13 @@
 map{ id = "Boite_a_outils/base_centrale" }
-map{ id = "Boite_a_outils/pnj_items_monnaie/" }
 map{ id = "Boite_a_outils/pnj_items_monnaie/01", description = "01 pnj donne de l'argent, sans variable" }
-map{ id = "Boite_a_outils/pnj_items_monnaie/02", description = "02 pnj donne de l'argent, ajout d'une variable" }
+map{ id = "Boite_a_outils/pnj_items_monnaie/02", description = "02 pnj donne de l'argent, ajout d'une variable + explacation variable et explication des valeurs booleenne" }
+map{ id = "Boite_a_outils/pnj_items_monnaie/03", description = "03 pnj donne monnaie + ajoutd'un dialogue de refus" }
+map{ id = "Boite_a_outils/pnj_items_monnaie/04", description = "04 pnj donne un item" }
+map{ id = "les_dialogues/01", description = "01 dialogue sans scripte" }
+map{ id = "les_dialogues/02", description = "02 dialogue avec script et qu'est qu'une functon " }
+map{ id = "les_dialogues/03", description = "03 dialoque avec des tiles plus map vitrine" }
+map{ id = "les_dialogues/04", description = "04 question, callback" }
+map{ id = "les_dialogues/05" }
 map{ id = "monstres/Mowatulla" }
 map{ id = "monstres/aquadraco", description = "aquadraco" }
 map{ id = "monstres/arrghus" }
@@ -1269,6 +1275,7 @@ file{ path = "items/money_bag.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "items/pegasus_shoes.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "items/sword.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "items/tunic.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "languages/en/text/strings.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "musics/boss.it", author = "Nintendo", license = "Proprietary (Fair use)" }
 file{ path = "musics/eduardo", author = "Eduardo Dueñas", license = "CC BY-SA 4.0" }

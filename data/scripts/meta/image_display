@@ -1,0 +1,36 @@
+local image_display = {}
+
+function image_display:init(map, image_paths)
+  map.images = {}
+  for _, path in ipairs(image_paths) do
+    table.insert(map.images, sol.surface.create(path))
+  end
+  map.current_image_index = nil
+
+  function map:on_draw(dst_surface)
+    if map.current_image_index and map.images[map.current_image_index] then
+      map.images[map.current_image_index]:draw(dst_surface, 0, 0)
+    end
+  end
+end
+
+function image_display:start(map, game)
+  map.current_image_index = 1
+  game:set_hud_enabled(false)
+end
+
+function image_display:next_image(map, game)
+  if map.current_image_index then
+    if map.current_image_index < #map.images then
+      map.current_image_index = map.current_image_index + 1
+    else
+      map.current_image_index = nil
+      map.on_draw = nil
+      game:set_hud_enabled(true)
+    end
+    return true
+  end
+  return false
+end
+
+return image_display

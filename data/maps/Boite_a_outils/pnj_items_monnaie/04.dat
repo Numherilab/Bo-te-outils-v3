@@ -244,30 +244,10 @@ tile{
 
 tile{
   layer = 0,
-  x = 136,
-  y = 96,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
   x = 144,
-  y = 96,
+  y = 88,
   width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 96,
-  width = 8,
-  height = 8,
+  height = 56,
   pattern = "21_4",
   tileset = "01 Max Mraz/01 oceanset_inside",
 }
@@ -275,56 +255,6 @@ tile{
 tile{
   layer = 0,
   x = 136,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 128,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 136,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 136,
-  y = 136,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 136,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 152,
   y = 96,
   width = 8,
   height = 8,
@@ -334,7 +264,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 152,
+  x = 128,
   y = 104,
   width = 8,
   height = 8,
@@ -344,27 +274,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 152,
-  y = 136,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 152,
+  x = 120,
   y = 112,
   width = 8,
   height = 8,
@@ -374,19 +284,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 152,
+  x = 112,
   y = 120,
-  width = 8,
-  height = 8,
-  pattern = "21_4",
-  tileset = "01 Max Mraz/01 oceanset_inside",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 120,
-  width = 8,
+  width = 56,
   height = 8,
   pattern = "21_4",
   tileset = "01 Max Mraz/01 oceanset_inside",
@@ -406,7 +306,7 @@ teletransporter{
   y = 192,
   width = 16,
   height = 16,
-  destination_map = "Boite_a_outils/pnj_items_monnaie/01",
+  destination_map = "Boite_a_outils/pnj_items_monnaie/03",
   destination = "destination_2",
 }
 
@@ -424,18 +324,17 @@ teletransporter{
   y = 32,
   width = 16,
   height = 16,
-  destination_map = "Boite_a_outils/pnj_items_monnaie/03",
-  destination = "destination",
+  destination_map = "Boite_a_outils/base_centrale",
 }
 
 npc{
-  name = "marty",
+  name = "caroline",
   layer = 0,
   x = 96,
-  y = 93,
+  y = 85,
   direction = 3,
   subtype = 1,
-  sprite = "npc/bttf/marty_mcfly",
+  sprite = "npc/witch",
 }
 
 npc{

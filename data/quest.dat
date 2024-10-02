@@ -11,6 +11,6 @@ quest{
   website = "",
   normal_quest_size = "320x240",
   min_quest_size = "320x240",
-  max_quest_size = "320x240",
+  max_quest_size = "1280x800",
 }
 
